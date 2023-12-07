@@ -1,14 +1,10 @@
 ﻿using System;
 using Practica5.Interfaces;
 
-namespace Practica5.Modelos
+namespace Practica5.Modelos.ModelosDePrueba
 {
-	public class MenuPrueba:IMenu
-	{
-		public MenuPrueba()
-		{
-		}
-
+    public class MenuPrueba : IMenu
+    {
         public string Titulo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public void AgregarPlatillo(string nombrePlatillo, int precioPlatillo)
