@@ -1,9 +1,11 @@
 ﻿using Practica5.Interfaces;
-using Practica5.Modelos;
+using Practica5.Modelos.ModelosDePrueba;
 
 namespace Practica5;
 class Program
 {
+    private static IRestaurante restaurante = new RestaurantePrueba();
+
     static void Main(string[] args)
     {
         Console.WriteLine("Hello, World!");
@@ -43,21 +45,30 @@ class Program
                 case "1":
                     ManejarOpcionAgregarMenuNuevo();
                     break;
+                case "2":
+                    ManejarOpcionAgregarElementosAMenu();
+                    break;
             }
         }
     }
 
     static void MostrarMenuAdministracionMenus()
     {
-        Console.WriteLine("Agregar Menu nuevo");
+        Console.WriteLine("1) Agregar Menu nuevo");
+        Console.WriteLine("2) Agregar Elementos a menú");
     }
 
     static void ManejarOpcionAgregarMenuNuevo()
     {
         Console.WriteLine("Dime el titulo del nuevo menu:");
         string titulo = Console.ReadLine();
-        IRestaurante restaurante = new RestaurantePrueba();
+        
         restaurante.CrearMenu(titulo);
+    }
+
+    static void ManejarOpcionAgregarElementosAMenu()
+    {
+
     }
 }
 
